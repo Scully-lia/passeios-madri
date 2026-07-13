@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passeios em Madri — Roteiros 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --sol: #FFC93C;
+  --sol-deep: #F2A900;
+  --terracota: #FF6B4A;
+  --terracota-deep: #E8512F;
+  --noite: #1B1035;
+  --noite-soft: #2A1D4D;
+  --marfim: #F7F1E4;
+  --marfim-deep: #EFE5D0;
+  --jade: #237567;
+  --jade-deep: #185A4F;
+  --tinta: #201535;
+
+  --display: 'Fraunces', serif;
+  --corpo: 'Space Grotesk', sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:var(--corpo);
+  background:var(--marfim);
+  color:var(--tinta);
+  overflow-x:hidden;
+}
+
+a{color:inherit;text-decoration:none;}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 5vw;
+  background:rgba(27,16,53,0.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,201,60,0.15);
+  transition:padding .3s ease;
+}
+.nav-logo{
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.3rem;
+  color:var(--marfim);
+  display:flex;align-items:center;gap:8px;
+  letter-spacing:.02em;
+}
+.nav-logo span{color:var(--sol);}
+.nav-links{
+  display:flex;gap:28px;
+  list-style:none;
+}
+.nav-links a{
+  font-size:.82rem;
+  font-weight:500;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--marfim-deep);
+  opacity:.75;
+  transition:opacity .2s, color .2s;
+  position:relative;
+  padding-bottom:4px;
+}
+.nav-links a:hover, .nav-links a.active{
+  opacity:1;
+  color:var(--sol);
+}
+.nav-links a.active::after{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:var(--sol);
+  border-radius:2px;
+}
+.nav-cta{
+  background:var(--terracota);
+  color:var(--marfim);
+  padding:10px 20px;
+  border-radius:100px;
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.03em;
+  white-space:nowrap;
+  transition:background .2s, transform .2s;
+}
+.nav-cta:hover{background:var(--terracota-deep);transform:translateY(-1px);}
+.nav-toggle{display:none;background:none;border:none;color:var(--marfim);font-size:1.6rem;cursor:pointer;}
+
+@media (max-width:900px){
+  .nav-links{
+    position:fixed;top:64px;left:0;right:0;
+    flex-direction:column;
+    background:var(--noite);
+    padding:20px 5vw 28px;
+    gap:18px;
+    transform:translateY(-150%);
+    transition:transform .35s ease;
+    border-bottom:1px solid rgba(255,201,60,0.15);
+  }
+  .nav-links.open{transform:translateY(0);}
+  .nav-cta{display:none;}
+  .nav-toggle{display:block;}
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,201,60,0.35), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(255,107,74,0.30), transparent 50%),
+    linear-gradient(160deg, var(--noite) 0%, var(--noite-soft) 55%, #1f1440 100%);
+  overflow:hidden;
+  padding:120px 5vw 80px;
+}
+.hero-blob{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(0px);
+  opacity:.9;
+}
+.hero-blob.b1{
+  width:520px;height:520px;
+  background:var(--sol);
+  top:-140px;right:-120px;
+  opacity:.95;
+  animation:float1 9s ease-in-out infinite;
+}
+.hero-blob.b2{
+  width:260px;height:260px;
+  background:var(--terracota);
+  bottom:60px;right:22%;
+  opacity:.85;
+  animation:float2 7s ease-in-out infinite;
+}
+@keyframes float1{
+  0%,100%{transform:translateY(0) translateX(0);}
+  50%{transform:translateY(24px) translateX(-18px);}
+}
+@keyframes float2{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-20px);}
+}
+.hero-content{position:relative;z-index:5;max-width:800px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--sol);
+  font-size:.85rem;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+.hero-eyebrow::before{
+  content:'';
+  width:34px;height:1px;
+  background:var(--sol);
+}
+.hero h1{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(3rem, 8vw, 6.4rem);
+  line-height:.98;
+  color:var(--marfim);
+  letter-spacing:-.01em;
+}
+.hero h1 em{
+  font-style:italic;
+  font-weight:500;
+  color:var(--sol);
+}
+.hero p{
+  margin-top:28px;
+  font-size:clamp(1.05rem, 1.6vw, 1.3rem);
+  line-height:1.6;
+  color:var(--marfim-deep);
+  max-width:560px;
+  opacity:.9;
+}
+.hero-actions{
+  margin-top:44px;
+  display:flex;gap:16px;flex-wrap:wrap;
+}
+.btn-primary{
+  background:var(--sol);
+  color:var(--noite);
+  padding:16px 32px;
+  border-radius:100px;
+  font-weight:700;
+  font-size:.95rem;
+  letter-spacing:.02em;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:transform .2s, box-shadow .2s;
+  box-shadow:0 8px 24px rgba(255,201,60,.25);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,201,60,.35);}
+.btn-ghost{
+  border:1.5px solid rgba(247,241,228,.35);
+  color:var(--marfim);
+  padding:16px 32px;
+  border-radius:100px;
+  font-weight:600;
+  font-size:.95rem;
+  transition:border-color .2s, background .2s;
+}
+.btn-ghost:hover{border-color:var(--sol);background:rgba(255,201,60,.08);}
+
+.hero-stats{
+  position:relative;z-index:5;
+  margin-top:80px;
+  display:flex;gap:56px;
+  flex-wrap:wrap;
+}
+.hero-stat b{
+  font-family:var(--display);
+  font-size:2.4rem;
+  color:var(--sol);
+  display:block;
+  font-weight:600;
+}
+.hero-stat span{
+  font-size:.8rem;
+  color:var(--marfim-deep);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  opacity:.8;
+}
+
+/* ---------- SECTION GENERIC ---------- */
+.section{
+  padding:120px 5vw;
+  position:relative;
+}
+.section-head{
+  max-width:680px;
+  margin-bottom:72px;
+}
+.section-eyebrow{
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--terracota-deep);
+  margin-bottom:16px;
+  display:block;
+}
+.section-head h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(2.2rem, 4vw, 3.4rem);
+  line-height:1.05;
+  color:var(--noite);
+}
+.section-head p{
+  margin-top:20px;
+  font-size:1.1rem;
+  line-height:1.6;
+  color:#5b5468;
+}
+
+/* ---------- ROTEIROS (passeios) ---------- */
+#roteiros{background:var(--marfim);}
+
+.filter-bar{
+  display:flex;gap:10px;flex-wrap:wrap;
+  margin-bottom:56px;
+}
+.filter-chip{
+  padding:10px 20px;
+  border-radius:100px;
+  border:1.5px solid rgba(32,21,53,.15);
+  font-size:.85rem;
+  font-weight:600;
+  cursor:pointer;
+  background:transparent;
+  color:var(--tinta);
+  transition:all .2s;
+}
+.filter-chip:hover{border-color:var(--terracota);}
+.filter-chip.active{
+  background:var(--noite);
+  border-color:var(--noite);
+  color:var(--sol);
+}
+
+.passeio-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border-radius:28px;
+  overflow:hidden;
+  background:#fff;
+  margin-bottom:32px;
+  box-shadow:0 4px 24px rgba(32,21,53,.06);
+  transition:box-shadow .3s, transform .3s;
+}
+.passeio-card:hover{box-shadow:0 16px 44px rgba(32,21,53,.14);transform:translateY(-4px);}
+.passeio-card.reverse{grid-template-columns:1fr 1fr;}
+.passeio-card.reverse .passeio-visual{order:2;}
+.passeio-card.reverse .passeio-body{order:1;}
+
+.passeio-visual{
+  position:relative;
+  min-height:340px;
+  display:flex;align-items:center;justify-content:center;
+  padding:40px;
+  overflow:hidden;
+}
+.passeio-visual .stamp{
+  width:150px;height:150px;
+  border-radius:50%;
+  border:3px dashed rgba(255,255,255,.55);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:#fff;
+  position:relative;
+  z-index:3;
+  transform:rotate(-8deg);
+}
+.passeio-visual .stamp .num{
+  font-family:var(--display);
+  font-size:3.2rem;
+  font-weight:700;
+  line-height:1;
+}
+.passeio-visual .stamp .lbl{
+  font-size:.62rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-top:4px;
+  opacity:.9;
+}
+.passeio-visual::before{
+  content:'';
+  position:absolute;inset:0;
+  opacity:.15;
+  background-image:
+    repeating-linear-gradient(45deg, #fff 0, #fff 2px, transparent 2px, transparent 14px);
+}
+.duration-badge{
+  position:absolute;top:24px;right:24px;
+  background:rgba(255,255,255,.92);
+  color:var(--noite);
+  padding:8px 16px;
+  border-radius:100px;
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  z-index:4;
+}
+.price-tag{
+  position:absolute;bottom:22px;left:24px;
+  background:var(--marfim);
+  color:var(--noite);
+  padding:10px 18px;
+  border-radius:10px;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.05rem;
+  transform:rotate(-4deg);
+  box-shadow:0 6px 16px rgba(0,0,0,.18);
+  z-index:4;
+}
+.price-tag small{
+  display:block;
+  font-family:var(--corpo);
+  font-weight:500;
+  font-size:.62rem;
+  color:#7a7387;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  margin-top:2px;
+}
+
+.passeio-body{
+  padding:44px 44px;
+  display:flex;flex-direction:column;
+  justify-content:center;
+}
+.passeio-tags{
+  display:flex;gap:8px;flex-wrap:wrap;
+  margin-bottom:18px;
+}
+.tag{
+  font-size:.7rem;
+  font-weight:600;
+  padding:5px 12px;
+  border-radius:100px;
+  background:var(--marfim-deep);
+  color:#6b5f4f;
+  display:flex;align-items:center;gap:5px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.passeio-body h3{
+  font-family:var(--display);
+  font-size:1.85rem;
+  font-weight:600;
+  color:var(--noite);
+  margin-bottom:14px;
+  line-height:1.15;
+}
+.passeio-body p{
+  font-size:.98rem;
+  line-height:1.65;
+  color:#5b5468;
+  margin-bottom:20px;
+}
+.paradas-list{
+  display:flex;flex-wrap:wrap;
+  gap:8px;
+}
+.parada-pill{
+  font-size:.78rem;
+  padding:6px 13px;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid rgba(32,21,53,.14);
+  color:#514a5e;
+}
+.passeio-note{
+  margin-top:18px;
+  font-size:.82rem;
+  color:var(--terracota-deep);
+  font-weight:600;
+}
+
+@media (max-width:820px){
+  .passeio-card, .passeio-card.reverse{grid-template-columns:1fr;}
+  .passeio-card.reverse .passeio-visual{order:1;}
+  .passeio-card.reverse .passeio-body{order:2;}
+  .passeio-visual{min-height:260px;}
+}
+
+/* ---------- PRECOS ---------- */
+#precos{
+  background:var(--noite);
+  color:var(--marfim);
+}
+#precos .section-eyebrow{color:var(--sol);}
+#precos .section-head h2{color:var(--marfim);}
+#precos .section-head p{color:var(--marfim-deep);opacity:.85;}
+
+.price-tables{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+.price-table-card{
+  background:var(--noite-soft);
+  border-radius:24px;
+  padding:36px;
+  border:1px solid rgba(255,201,60,.14);
+}
+.price-table-card h4{
+  font-family:var(--display);
+  font-size:1.35rem;
+  font-weight:600;
+  color:var(--sol);
+  margin-bottom:24px;
+}
+table{width:100%;border-collapse:collapse;}
+th, td{
+  text-align:left;
+  padding:12px 8px;
+  font-size:.82rem;
+  border-bottom:1px solid rgba(247,241,228,.08);
+}
+th{
+  color:var(--marfim-deep);
+  font-weight:600;
+  text-transform:uppercase;
+  font-size:.68rem;
+  letter-spacing:.06em;
+  opacity:.7;
+}
+td{color:var(--marfim);}
+td.strong{font-weight:700;color:var(--sol);}
+tr:last-child td{border-bottom:none;}
+
+@media (max-width:820px){
+  .price-tables{grid-template-columns:1fr;}
+  .price-table-card{padding:24px 18px;overflow-x:auto;}
+  table{min-width:480px;}
+}
+
+/* ---------- CONDICOES ---------- */
+#condicoes{background:var(--marfim-deep);}
+.cond-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+}
+.cond-item{
+  background:#fff;
+  border-radius:18px;
+  padding:26px 28px;
+  display:flex;gap:16px;
+  align-items:flex-start;
+}
+.cond-item .ico{
+  width:38px;height:38px;
+  border-radius:10px;
+  background:var(--jade);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;
+  flex-shrink:0;
+  font-family:var(--display);
+  font-weight:700;
+}
+.cond-item p{font-size:.9rem;line-height:1.55;color:#4a4456;}
+.cond-item strong{color:var(--noite);}
+
+@media (max-width:820px){
+  .cond-grid{grid-template-columns:1fr;}
+}
+
+.combo-strip{
+  margin-top:48px;
+  display:flex;gap:20px;
+  flex-wrap:wrap;
+}
+.combo-card{
+  flex:1;
+  min-width:260px;
+  background:linear-gradient(135deg, var(--terracota), var(--sol-deep));
+  border-radius:20px;
+  padding:28px 30px;
+  color:var(--noite);
+}
+.combo-card .hrs{
+  font-family:var(--display);
+  font-size:2.2rem;
+  font-weight:700;
+  display:block;
+}
+.combo-card p{font-size:.9rem;font-weight:600;margin-top:8px;line-height:1.5;}
+
+/* ---------- SOBRE / CONTATO ---------- */
+#contato{
+  background:linear-gradient(160deg, var(--jade-deep), var(--jade) 60%, #1c5a4f);
+  color:var(--marfim);
+  position:relative;
+  overflow:hidden;
+}
+#contato::before{
+  content:'';
+  position:absolute;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:rgba(255,201,60,.12);
+  top:-260px;left:-200px;
+}
+.contato-wrap{
+  position:relative;z-index:2;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:64px;
+  align-items:center;
+}
+.contato-wrap h2{
+  font-family:var(--display);
+  font-size:clamp(2.2rem,4vw,3.2rem);
+  font-weight:600;
+  line-height:1.08;
+  margin-bottom:20px;
+}
+.contato-wrap h2 em{color:var(--sol);font-style:italic;}
+.contato-wrap > div > p{
+  font-size:1.05rem;
+  line-height:1.6;
+  opacity:.9;
+  max-width:460px;
+}
+.guides{
+  margin-top:40px;
+  display:flex;gap:20px;
+  flex-wrap:wrap;
+}
+.guide-card{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:16px;
+  padding:18px 22px;
+  display:flex;align-items:center;gap:14px;
+}
+.guide-avatar{
+  width:46px;height:46px;
+  border-radius:50%;
+  background:var(--sol);
+  color:var(--noite);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);
+  font-weight:700;
+  font-size:1.1rem;
+}
+.guide-card b{font-size:.92rem;display:block;}
+.guide-card span{font-size:.75rem;opacity:.75;}
+
+.contact-card{
+  background:var(--marfim);
+  color:var(--noite);
+  border-radius:24px;
+  padding:44px;
+}
+.contact-card h3{
+  font-family:var(--display);
+  font-size:1.5rem;
+  margin-bottom:24px;
+}
+.contact-row{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid rgba(32,21,53,.1);
+}
+.contact-row:last-child{border-bottom:none;}
+.contact-row .ico{
+  width:40px;height:40px;
+  border-radius:50%;
+  background:var(--terracota);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.contact-row b{display:block;font-size:.95rem;}
+.contact-row span{font-size:.82rem;color:#6b5f4f;}
+.contact-card .btn-primary{width:100%;justify-content:center;margin-top:24px;}
+
+@media (max-width:900px){
+  .contato-wrap{grid-template-columns:1fr;gap:40px;}
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:var(--noite);
+  color:var(--marfim-deep);
+  padding:48px 5vw 32px;
+  text-align:center;
+  font-size:.82rem;
+}
+footer .foot-logo{
+  font-family:var(--display);
+  font-size:1.3rem;
+  color:var(--sol);
+  margin-bottom:12px;
+}
+footer .foot-sub{opacity:.6;margin-top:8px;}
+
+/* ---------- REVEAL ANIM ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .hero-blob{animation:none;}
+}
+
+:focus-visible{
+  outline:2.5px solid var(--sol);
+  outline-offset:3px;
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#top" class="nav-logo">✦ Passeios <span>em Madri</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#roteiros">Roteiros</a></li>
+    <li><a href="#precos">Preços</a></li>
+    <li><a href="#condicoes">Condições</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Reservar agora</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="hero-content">
+    <span class="hero-eyebrow">Catálogo de passeios · 2025</span>
+    <h1>Madri é<br><em>surpreendente.</em><br>Vamos descobrir?</h1>
+    <p>Onze roteiros a pé e de carro pela capital espanhola e seus arredores — de praças imperiais a aquedutos romanos, guiados por quem vive a cidade todos os dias.</p>
+    <div class="hero-actions">
+      <a href="#roteiros" class="btn-primary">Ver todos os roteiros →</a>
+      <a href="#precos" class="btn-ghost">Consultar preços</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><b>11</b><span>Roteiros disponíveis</span></div>
+    <div class="hero-stat"><b>3</b><span>Comunidades autônomas</span></div>
+    <div class="hero-stat"><b>2h–8h</b><span>Duração por passeio</span></div>
+  </div>
+</header>
+
+<section class="section" id="roteiros">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">O catálogo</span>
+    <h2>Onze jeitos de conhecer Madri</h2>
+    <p>De caminhadas pelo centro histórico a excursões de dia inteiro por Castela — escolha o ritmo, o meio de transporte e o tema que combinam com sua viagem.</p>
+  </div>
+
+  <div class="filter-bar reveal">
+    <button class="filter-chip active" data-filter="all">Todos</button>
+    <button class="filter-chip" data-filter="pe">A pé</button>
+    <button class="filter-chip" data-filter="carro">De carro</button>
+    <button class="filter-chip" data-filter="fora">Fora de Madri</button>
+  </div>
+
+  <div id="cardsWrap"></div>
+</section>
+
+<section class="section" id="precos">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">Investimento</span>
+    <h2>Critérios orientativos</h2>
+    <p>Valores de referência por serviço contratado, com e sem IVA (21%), para dias úteis e feriados. Grupos e condições especiais mediante consulta.</p>
+  </div>
+
+  <div class="price-tables reveal">
+    <div class="price-table-card">
+      <h4>Serviços em Madri Capital</h4>
+      <table>
+        <thead>
+          <tr><th>Serviço</th><th>Máx. h</th><th>Útil</th><th>Feriado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Transfer</td><td>2,5h</td><td>160 €</td><td class="strong">200 €</td></tr>
+          <tr><td>Meio dia</td><td>3h</td><td>190 €</td><td class="strong">230 €</td></tr>
+          <tr><td>Meio dia</td><td>4h</td><td>215 €</td><td class="strong">250 €</td></tr>
+          <tr><td>Meio dia</td><td>5h</td><td>240 €</td><td class="strong">290 €</td></tr>
+          <tr><td>Assist. noturna</td><td>3h</td><td>200 €</td><td class="strong">240 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="price-table-card">
+      <h4>Serviços fora de Madri Capital</h4>
+      <table>
+        <thead>
+          <tr><th>Serviço</th><th>Máx. h</th><th>Útil</th><th>Feriado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Meio dia</td><td>5h</td><td>240 €</td><td class="strong">290 €</td></tr>
+          <tr><td>Dia completo</td><td>8h</td><td>320 €</td><td class="strong">390 €</td></tr>
+          <tr><td>Segundo guia</td><td>—</td><td>240 €</td><td class="strong">290 €</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:.75rem;opacity:.6;margin-top:16px;">Valores sem IVA. Acrescente 21% para o valor com impostos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="condicoes">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">Bom saber</span>
+    <h2>Duração aproximada e outras considerações</h2>
+    <p>Combinações populares e regras que valem para todos os roteiros do catálogo.</p>
+  </div>
+
+  <div class="combo-strip reveal">
+    <div class="combo-card">
+      <span class="hrs">5h</span>
+      <p>Toledo, El Escorial, Chinchón, Aranjuez ou Alcalá de Henares</p>
+    </div>
+    <div class="combo-card">
+      <span class="hrs">10h</span>
+      <p>Toledo + Aranjuez, ou Ávila + Segóvia no mesmo dia</p>
+    </div>
+  </div>
+
+  <div class="cond-grid reveal" style="margin-top:40px;">
+    <div class="cond-item">
+      <div class="ico">30</div>
+      <p>Preços válidos para <strong>indivíduos e grupos de até 30 pessoas</strong> em Madri; até <strong>50 pessoas</strong> em serviços fora da capital.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">2×</div>
+      <p>O <strong>dia inteiro em Madri</strong> é sempre cobrado como dois meios dias.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">🎧</div>
+      <p>Fones de ouvido são <strong>obrigatórios para grupos de mais de 15 pessoas</strong> e em monumentos que exigem — não incluídos no preço.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">🌙</div>
+      <p>Serviços <strong>noturnos</strong> são os prestados entre <strong>20h00 e 8h00</strong>.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">⏱</div>
+      <p>Cancelamentos com <strong>menos de 24h</strong> de antecedência são cobrados integralmente.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">🎫</div>
+      <p>Entradas, transporte e passagens <strong>já pagos não são reembolsáveis</strong> em caso de cancelamento.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">📍</div>
+      <p>Pontos de encontro <strong>fora do perímetro urbano</strong> geram custo extra de tempo e deslocamento.</p>
+    </div>
+    <div class="cond-item">
+      <div class="ico">📅</div>
+      <p>Feriados seguem o <strong>calendário oficial da Comunidade de Madri</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contato">
+  <div class="contato-wrap">
+    <div>
+      <h2>Esperamos<br><em>passear</em><br>com você!</h2>
+      <p>Roteiros personalizáveis, guias que falam português e um jeito local de contar a história de Madri. Escreva pra gente e monte seu passeio ideal.</p>
+      <div class="guides">
+        <div class="guide-card">
+          <div class="guide-avatar">G</div>
+          <div><b>Giulia Serenato Aguiar</b><span>Guia local</span></div>
+        </div>
+        <div class="guide-card">
+          <div class="guide-avatar">J</div>
+          <div><b>Juliana Serenato Ripol</b><span>Guia local</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h3>Fale conosco</h3>
+      <div class="contact-row">
+        <div class="ico">📞</div>
+        <div><b>+34 687 630 129</b><span>WhatsApp e chamadas</span></div>
+      </div>
+      <div class="contact-row">
+        <div class="ico">📍</div>
+        <div><b>Madri, Espanha</b><span>Passeios pela cidade e arredores</span></div>
+      </div>
+      <div class="contact-row">
+        <div class="ico">🗓️</div>
+        <div><b>2025</b><span>Temporada atual do catálogo</span></div>
+      </div>
+      <a href="https://wa.me/34687630129" class="btn-primary" target="_blank" rel="noopener">Reservar pelo WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">✦ Passeios em Madri</div>
+  <div>Roteiros a pé e de carro por Madri, Toledo, Segóvia, Ávila e mais.</div>
+  <div class="foot-sub">© 2025 Passeios em Madri — Giulia Serenato Aguiar &amp; Juliana Serenato Ripol</div>
+</footer>
+
+<script>
+const passeios = [
+  {
+    n:1, tema:['pe'], dur:'2h', color1:'#FF6B4A', color2:'#F2A900',
+    titulo:'Madri essencial', preco:'170€', precoNota:'+ IVA · grupos a consultar',
+    texto:'Madri é a cidade dos contrastes — tão tradicional quanto moderna. Vamos aos pontos turísticos imprescindíveis, descobrindo história, curiosidades e a gastronomia mais típica.',
+    tags:['Visita a pé','Só exteriores'],
+    paradas:['Plaza Mayor','Puerta del Sol','Teatro Real','Mercado de San Miguel','Palacio Real','Catedral de La Almudena','Plaza de la Villa']
+  },
+  {
+    n:2, tema:['pe'], dur:'3h', color1:'#237567', color2:'#FFC93C',
+    titulo:'Madri e o Retiro', preco:'190€', precoNota:'+ IVA · grupos a consultar',
+    texto:'Para completar o roteiro essencial, visitamos o interior do Parque El Retiro, o pulmão verde da cidade, e outros monumentos importantes ao redor.',
+    tags:['Visita a pé','Só exteriores'],
+    paradas:['Parque del Retiro (interior)','Puerta de Alcalá','Fuente Cibeles','Banco de España','Palacio de Cibeles']
+  },
+  {
+    n:3, tema:['carro'], dur:'2h', color1:'#1B1035', color2:'#FF6B4A',
+    titulo:'Madrid panorâmico', preco:'190€', precoNota:'+ IVA · grupos a consultar',
+    texto:'Uma visão geral da cidade desde o conforto de um carro particular, passando pelos principais atrativos turísticos de Madri.',
+    tags:['Visita de carro','Só exteriores'],
+    paradas:['Santiago Bernabéu','Plaza de Toros','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Palacio de Cibeles','Plaza de Colón','Calle Serrano','Puerta de Toledo','Catedral de La Almudena']
+  },
+  {
+    n:4, tema:['carro'], dur:'4h', color1:'#E8512F', color2:'#1B1035',
+    titulo:'Madrid panorâmico com Praça de Touros', preco:'215€', precoNota:'grupos a consultar',
+    texto:'Se o panorâmico parece curto demais, conhecemos também o interior da Praça de Touros — visita livre e museu taurino incluídos.',
+    tags:['Visita de carro','Só exteriores','Entrada não incluída'],
+    paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Plaza de Colón','Calle Serrano'],
+    nota:'*Sujeito à disponibilidade e horário de funcionamento.'
+  },
+  {
+    n:5, tema:['carro'], dur:'4h', color1:'#185A4F', color2:'#F2A900',
+    titulo:'Madrid panorâmico com Santiago Bernabéu', preco:'215€', precoNota:'grupos a consultar',
+    texto:'A opção para quem quer conhecer o interior do lendário estádio do Real Madrid, o Santiago Bernabéu, além do roteiro panorâmico completo.',
+    tags:['Visita de carro','Só exteriores','Entrada não incluída'],
+    paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Fuente de Neptuno','Plaza de Colón','Catedral de La Almudena'],
+    nota:'*Sujeito à disponibilidade e horário de funcionamento.'
+  },
+  {
+    n:6, tema:['pe'], dur:'2h', color1:'#F2A900', color2:'#237567',
+    titulo:'Palacio Real', preco:'190€', precoNota:'máximo 9 pessoas',
+    texto:'Conheça um dos maiores palácios da Europa por dentro: os cômodos favoritos dos reis, a sala de jantar de gala, a sala do Trono e o pátio de armas.',
+    tags:['Visita a pé','Entrada não incluída'],
+    paradas:['Visita guiada pelo interior do Palácio Real de Madri'],
+    nota:'*Sujeito à disponibilidade e horário de funcionamento.'
+  },
+  {
+    n:7, tema:['pe','fora'], dur:'5h', color1:'#FF6B4A', color2:'#237567',
+    titulo:'Alcalá de Henares', preco:'230€', precoNota:'grupos a consultar',
+    texto:'A cidade onde nasceu Miguel de Cervantes e por onde passaram Calderón de la Barca, Quevedo, Colombo e o Cardeal Cisneros — o Século de Ouro espanhol.',
+    tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
+    paradas:['Calle Mayor','Plaza Cervantes','Casa Cervantes','Capilla del Oidor','Prefeitura','Catedral Magistral','Palacio Arzobispal','Rectorado de la Universidad']
+  },
+  {
+    n:8, tema:['pe','fora'], dur:'5h', color1:'#F2A900', color2:'#1B1035',
+    titulo:'Segóvia', preco:'240€', precoNota:'grupos a consultar',
+    texto:'Uma cidade mágica e essencialmente romana. Veremos o imponente aqueduto, a catedral, a judiaria e o Alcácer — inspiração do castelo da Cinderela.',
+    tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
+    paradas:['Aqueduto de Segóvia','Mirante da Mulher Deitada','Casa dos Picos','Plaza Mayor','Catedral','Alcácer']
+  },
+  {
+    n:9, tema:['pe','fora'], dur:'5h', color1:'#237567', color2:'#FF6B4A',
+    titulo:'Toledo', preco:'240€', precoNota:'grupos a consultar',
+    texto:'A cidade das três culturas — cristã, muçulmana e judia — e berço de grandes avanços científicos e literários da Espanha.',
+    tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
+    paradas:['Plaza de Zocodover','Catedral','Prefeitura','Bairro Judeu','Mirante']
+  },
+  {
+    n:10, tema:['pe','fora'], dur:'4h', color1:'#1B1035', color2:'#FFC93C',
+    titulo:'El Escorial', preco:'240€', precoNota:'grupos a consultar',
+    texto:'Construído no século XVI, o interior deste mosteiro emblemático guarda cômodos reais, panteão, salas e bibliotecas históricas.',
+    tags:['Transfer hotel-cidade','Visita a pé','Entrada não incluída'],
+    paradas:['Mosteiro de El Escorial']
+  },
+  {
+    n:11, tema:['pe','fora'], dur:'8h', color1:'#E8512F', color2:'#185A4F',
+    titulo:'Ávila', preco:'320€', precoNota:'grupos a consultar',
+    texto:'Uma joia de Castela e Leão, Patrimônio da Humanidade, com a primeira catedral gótica da Espanha e o berço da ordem das Carmelitas Descalças.',
+    tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
+    paradas:['Catedral','Muralha','Plaza Mayor','Prefeitura','Convento de Santa Teresa']
+  }
+];
+
+const wrap = document.getElementById('cardsWrap');
+
+function render(list){
+  wrap.innerHTML = list.map((p, i) => `
+    <div class="passeio-card reveal ${i % 2 === 1 ? 'reverse' : ''}" data-tema="${p.tema.join(' ')}">
+      <div class="passeio-visual" style="background:linear-gradient(135deg, ${p.color1}, ${p.color2});">
+        <span class="duration-badge">${p.dur} aprox</span>
+        <div class="stamp">
+          <span class="num">${String(p.n).padStart(2,'0')}</span>
+          <span class="lbl">Passeio</span>
+        </div>
+        <div class="price-tag">${p.preco}<small>${p.precoNota}</small></div>
+      </div>
+      <div class="passeio-body">
+        <div class="passeio-tags">
+          ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+        </div>
+        <h3>${p.titulo}</h3>
+        <p>${p.texto}</p>
+        <div class="paradas-list">
+          ${p.paradas.map(pa => `<span class="parada-pill">${pa}</span>`).join('')}
+        </div>
+        ${p.nota ? `<div class="passeio-note">${p.nota}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+  observeReveals();
+}
+
+render(passeios);
+
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    const f = chip.dataset.filter;
+    const filtered = f === 'all' ? passeios : passeios.filter(p => p.tema.includes(f));
+    render(filtered);
+  });
+});
+
+// Reveal on scroll
+function observeReveals(){
+  const els = document.querySelectorAll('.reveal:not(.visible)');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.12});
+  els.forEach(el => io.observe(el));
+}
+observeReveals();
+
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Scroll spy
+const sections = ['roteiros','precos','condicoes','contato'];
+const navA = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if(el && window.scrollY >= el.offsetTop - 160) current = id;
+  });
+  navA.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+
+</body>
+</html>
