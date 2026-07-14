@@ -549,6 +549,125 @@ tr:last-child td{border-bottom:none;}
 }
 .combo-card p{font-size:.9rem;font-weight:600;margin-top:8px;line-height:1.5;}
 
+/* ---------- QUEM SOMOS ---------- */
+#quemsomos{background:var(--marfim-deep);}
+.sobre-wrap{
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:56px;
+  align-items:center;
+}
+.sobre-photo{
+  position:relative;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 20px 50px rgba(32,21,53,.18);
+}
+.sobre-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  aspect-ratio:4/5;
+}
+.sobre-text h2{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:clamp(2rem,3.6vw,2.8rem);
+  line-height:1.1;
+  color:var(--noite);
+  margin-bottom:22px;
+}
+.sobre-text p{
+  font-size:1.05rem;
+  line-height:1.7;
+  color:#4a4456;
+  margin-bottom:18px;
+}
+.sobre-text p:last-child{margin-bottom:0;}
+
+@media (max-width:820px){
+  .sobre-wrap{grid-template-columns:1fr;gap:32px;}
+  .sobre-photo img{aspect-ratio:4/3;}
+}
+
+.sobre-gallery{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+  margin-top:40px;
+}
+.sobre-gallery img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(32,21,53,.14);
+  transition:transform .3s;
+}
+.sobre-gallery img:hover{transform:translateY(-4px);}
+
+@media (max-width:820px){
+  .sobre-gallery{grid-template-columns:repeat(2, 1fr);}
+}
+
+/* ---------- OPINIOES ---------- */
+#opinioes{background:var(--marfim-deep);}
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+.review-card{
+  background:#fff;
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 6px 20px rgba(32,21,53,.08);
+  display:flex;
+  flex-direction:column;
+}
+.review-stars{
+  color:var(--sol-deep);
+  font-size:1.1rem;
+  letter-spacing:.1em;
+  margin-bottom:16px;
+}
+.review-text{
+  font-size:.98rem;
+  line-height:1.65;
+  color:#4a4456;
+  flex-grow:1;
+  margin-bottom:20px;
+}
+.review-author{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.review-avatar{
+  width:40px;height:40px;
+  border-radius:50%;
+  background:var(--terracota);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);
+  font-weight:700;
+  flex-shrink:0;
+}
+.review-author b{
+  display:block;
+  font-size:.9rem;
+  color:var(--noite);
+}
+.review-author span{
+  font-size:.78rem;
+  color:#7a7387;
+}
+
+@media (max-width:820px){
+  .reviews-grid{grid-template-columns:1fr;}
+}
+
 /* ---------- SOBRE / CONTATO ---------- */
 #contato{
   background:linear-gradient(160deg, var(--jade-deep), var(--jade) 60%, #1c5a4f);
@@ -687,6 +806,8 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
     <li><a href="#roteiros">Roteiros</a></li>
     <li><a href="#precos">Preços</a></li>
     <li><a href="#condicoes">Condições</a></li>
+    <li><a href="#quemsomos">Quem somos</a></li>
+    <li><a href="#opinioes">Opiniões</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a href="#contato" class="nav-cta">Reservar agora</a>
@@ -810,6 +931,60 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
     <div class="cond-item">
       <div class="ico">📅</div>
       <p>Feriados seguem o <strong>calendário oficial da Comunidade de Madri</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quemsomos">
+  <div class="sobre-wrap">
+    <div class="sobre-photo">
+      <img src="WhatsApp Image 2026-07-13 at 15.03.58.jpeg" alt="Juliana e Giulia, mãe e filha, em uma viagem juntas">
+    </div>
+    <div class="sobre-text">
+      <span class="section-eyebrow">Quem somos</span>
+      <h2>Mãe e filha, especialistas em Madri</h2>
+      <p>Somos a Juliana e a Giulia — mãe e filha. Viemos de uma família que atua no turismo há anos, e crescemos ouvindo histórias de estrada antes de aprender a fazer as malas sozinhas.</p>
+      <p>Há anos viajamos juntas, e foi assim que decidimos transformar essa paixão em algo para compartilhar: mostrar Madri e seus arredores como nós a conhecemos.</p>
+    </div>
+  </div>
+  <div class="sobre-gallery">
+    <img src="20180327_132559.jpg" alt="Viagem em família">
+    <img src="20190718_182729.jpg" alt="Viagem em família">
+    <img src="20230125_194207.jpg" alt="Viagem em família">
+    <img src="WhatsApp Image 2026-07-13 at 14.11.26.jpeg" alt="Viagem em família">
+  </div>
+</section>
+
+<section class="section" id="opinioes">
+  <div class="section-head reveal">
+    <span class="section-eyebrow">Depoimentos</span>
+    <h2>O que dizem sobre nós</h2>
+    <p>Algumas experiências de quem já viajou com a gente.</p>
+  </div>
+  <div class="reviews-grid reveal">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Passeio incrível, a Giulia conhece cada canto de Madri e conta a história de um jeito que a gente nunca esquece. Recomendo demais!</p>
+      <div class="review-author">
+        <div class="review-avatar">M</div>
+        <div><b>Marina T.</b><span>São Paulo, Brasil</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Fizemos o passeio a Toledo com a Juliana e foi o ponto alto da viagem. Atenciosas, pontuais e com um português impecável.</p>
+      <div class="review-author">
+        <div class="review-avatar">R</div>
+        <div><b>Ricardo A.</b><span>Lisboa, Portugal</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">Contratamos o roteiro de Segóvia para a família toda e superou as expectativas. Deu pra sentir o carinho que elas têm pelo que fazem.</p>
+      <div class="review-author">
+        <div class="review-avatar">C</div>
+        <div><b>Camila F.</b><span>Rio de Janeiro, Brasil</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1001,7 +1176,7 @@ navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
 // Scroll spy
-const sections = ['roteiros','precos','condicoes','contato'];
+const sections = ['roteiros','precos','condicoes','quemsomos','opinioes','contato'];
 const navA = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let current = '';
