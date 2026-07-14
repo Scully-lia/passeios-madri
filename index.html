@@ -349,6 +349,15 @@ a{color:inherit;text-decoration:none;}
   background-image:
     repeating-linear-gradient(45deg, #fff 0, #fff 2px, transparent 2px, transparent 14px);
 }
+.passeio-visual::after{
+  content:'';
+  position:absolute;
+  width:220px;height:220px;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);
+  bottom:-90px;right:-60px;
+  z-index:1;
+}
 .duration-badge{
   position:absolute;top:24px;right:24px;
   background:rgba(255,255,255,.92);
@@ -358,16 +367,6 @@ a{color:inherit;text-decoration:none;}
   font-size:.75rem;
   font-weight:700;
   letter-spacing:.03em;
-  z-index:4;
-}
-.icon-badge{
-  position:absolute;bottom:20px;left:24px;
-  width:64px;height:64px;
-  background:rgba(255,255,255,.92);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  font-size:2.1rem;
-  box-shadow:0 6px 16px rgba(0,0,0,.18);
   z-index:4;
 }
 
@@ -895,7 +894,7 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
   <div class="contato-wrap">
     <div>
       <h2>Esperamos<br><em>passear</em><br>com você!</h2>
-      <p>Roteiros personalizáveis, uma guia que fala português e um jeito local de contar a històia de Madri. Escreva pra gente e monte seu passeio ideal.</p>
+      <p>Roteiros personalizáveis, uma guia que fala português e um jeito local de contar a história de Madri. Escreva pra gente e monte seu passeio ideal.</p>
       <div class="guides">
         <div class="guide-card">
           <div class="guide-avatar">G</div>
@@ -914,7 +913,7 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
         <div><b>+34 687 630 129</b><span>WhatsApp e chamadas</span></div>
       </div>
       <div class="contact-row">
-        <div class="ico">🍍</div>
+        <div class="ico">📍</div>
         <div><b>Madri, Espanha</b><span>Passeios pela cidade e arredores</span></div>
       </div>
       <div class="contact-row">
@@ -935,28 +934,28 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
 const passeios = [
   {
     n:1, tema:['pe'], dur:'2h', color1:'#FF6B4A', color2:'#F2A900',
-    titulo:'Madri essencial', icon:'🍛️',
+    titulo:'Madri essencial',
     texto:'Madri é a cidade dos contrastes — tão tradicional quanto moderna. Vamos aos pontos turísticos imprescindíveis, descobrindo história, curiosidades e a gastronomia mais típica.',
     tags:['Visita a pé','Só exteriores'],
     paradas:['Plaza Mayor','Puerta del Sol','Teatro Real','Mercado de San Miguel','Palacio Real','Catedral de La Almudena','Plaza de la Villa']
   },
   {
     n:2, tema:['pe'], dur:'3h', color1:'#237567', color2:'#FFC93C',
-    titulo:'Madri e o Retiro', icon:'🌳',
+    titulo:'Madri e o Retiro',
     texto:'Para completar o roteiro essencial, visitamos o interior do Parque El Retiro, o pulmão verde da cidade, e outros monumentos importantes ao redor.',
     tags:['Visita a pé','Só exteriores'],
     paradas:['Parque del Retiro (interior)','Puerta de Alcalá','Fuente Cibeles','Banco de España','Palacio de Cibeles']
   },
   {
     n:3, tema:['carro'], dur:'2h', color1:'#1B1035', color2:'#FF6B4A',
-    titulo:'Madrid panorâmico', icon:'🚗?',
+    titulo:'Madrid panorâmico',
     texto:'Uma visão geral da cidade desde o conforto de um carro particular, passando pelos principais atrativos turísticos de Madri.',
     tags:['Visita de carro','Só exteriores'],
     paradas:['Santiago Bernabéu','Plaza de Toros','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Palacio de Cibeles','Plaza de Colón','Calle Serrano','Puerta de Toledo','Catedral de La Almudena']
   },
   {
     n:4, tema:['carro'], dur:'4h', color1:'#E8512F', color2:'#1B1035',
-    titulo:'Madrid panorâmico com Praça de Touros', icon:'🐂',
+    titulo:'Madrid panorâmico com Praça de Touros',
     texto:'Se o panorâmico parece curto demais, conhecemos também o interior da Praça de Touros — visita livre e museu taurino incluídos.',
     tags:['Visita de carro','Só exteriores','Entrada não incluída'],
     paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Plaza de Colón','Calle Serrano'],
@@ -964,7 +963,7 @@ const passeios = [
   },
   {
     n:5, tema:['carro'], dur:'4h', color1:'#185A4F', color2:'#F2A900',
-    titulo:'Madrid panorâmico com Santiago Bernabéu', icon:'⚽',
+    titulo:'Madrid panorâmico com Santiago Bernabéu',
     texto:'A opção para quem quer conhecer o interior do lendário estádio do Real Madrid, o Santiago Bernabéu, além do roteiro panorâmico completo.',
     tags:['Visita de carro','Só exteriores','Entrada não incluída'],
     paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Fuente de Neptuno','Plaza de Colón','Catedral de La Almudena'],
@@ -972,7 +971,7 @@ const passeios = [
   },
   {
     n:6, tema:['pe'], dur:'2h', color1:'#F2A900', color2:'#237567',
-    titulo:'Palacio Real', icon:'👑',
+    titulo:'Palacio Real',
     texto:'Conheça um dos maiores palácios da Europa por dentro: os cômodos favoritos dos reis, a sala de jantar de gala, a sala do Trono e o pátio de armas.',
     tags:['Visita a pé','Entrada não incluída'],
     paradas:['Visita guiada pelo interior do Palácio Real de Madri'],
@@ -980,35 +979,35 @@ const passeios = [
   },
   {
     n:7, tema:['pe','fora'], dur:'5h', color1:'#FF6B4A', color2:'#237567',
-    titulo:'Alcalá de Henares', icon:'📖',
+    titulo:'Alcalá de Henares',
     texto:'A cidade onde nasceu Miguel de Cervantes e por onde passaram Calderón de la Barca, Quevedo, Colombo e o Cardeal Cisneros — o Século de Ouro espanhol.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Calle Mayor','Plaza Cervantes','Casa Cervantes','Capilla del Oidor','Prefeitura','Catedral Magistral','Palacio Arzobispal','Rectorado de la Universidad']
   },
   {
     n:8, tema:['pe','fora'], dur:'5h', color1:'#F2A900', color2:'#1B1035',
-    titulo:'Segóvia', icon:'🏰',
+    titulo:'Segóvia',
     texto:'Uma cidade mágica e essencialmente romana. Veremos o imponente aqueduto, a catedral, a judiaria e o Alcácer — inspiração do castelo da Cinderela.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Aqueduto de Segóvia','Mirante da Mulher Deitada','Casa dos Picos','Plaza Mayor','Catedral','Alcácer']
   },
   {
     n:9, tema:['pe','fora'], dur:'5h', color1:'#237567', color2:'#FF6B4A',
-    titulo:'Toledo', icon:'🕌',
+    titulo:'Toledo',
     texto:'A cidade das três culturas — cristã, muçulmana e judia — e berço de grandes avanços científicos e literários da Espanha.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Plaza de Zocodover','Catedral','Prefeitura','Bairro Judeu','Mirante']
   },
   {
     n:10, tema:['pe','fora'], dur:'4h', color1:'#1B1035', color2:'#FFC93C',
-    titulo:'El Escorial', icon:'⛪',
+    titulo:'El Escorial',
     texto:'Construído no século XVI, o interior deste mosteiro emblemático guarda cômodos reais, panteão, salas e bibliotecas históricas.',
     tags:['Transfer hotel-cidade','Visita a pé','Entrada não incluída'],
     paradas:['Mosteiro de El Escorial']
   },
   {
     n:11, tema:['pe','fora'], dur:'8h', color1:'#E8512F', color2:'#185A4F',
-    titulo:'Ávila', icon:'🛡️',
+    titulo:'Ávila',
     texto:'Uma joia de Castela e Leão, Patrimônio da Humanidade, com a primeira catedral gótica da Espanha e o berço da ordem das Carmelitas Descalças.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Catedral','Muralha','Plaza Mayor','Prefeitura','Convento de Santa Teresa']
@@ -1026,7 +1025,6 @@ function render(list){
           <span class="num">${String(p.n).padStart(2,'0')}</span>
           <span class="lbl">Passeio</span>
         </div>
-        <div class="icon-badge">${p.icon}</div>
       </div>
       <div class="passeio-body">
         <div class="passeio-tags">
