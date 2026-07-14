@@ -360,28 +360,15 @@ a{color:inherit;text-decoration:none;}
   letter-spacing:.03em;
   z-index:4;
 }
-.price-tag{
-  position:absolute;bottom:22px;left:24px;
-  background:var(--marfim);
-  color:var(--noite);
-  padding:10px 18px;
-  border-radius:10px;
-  font-family:var(--display);
-  font-weight:700;
-  font-size:1.05rem;
-  transform:rotate(-4deg);
+.icon-badge{
+  position:absolute;bottom:20px;left:24px;
+  width:64px;height:64px;
+  background:rgba(255,255,255,.92);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.1rem;
   box-shadow:0 6px 16px rgba(0,0,0,.18);
   z-index:4;
-}
-.price-tag small{
-  display:block;
-  font-family:var(--corpo);
-  font-weight:500;
-  font-size:.62rem;
-  color:#7a7387;
-  text-transform:uppercase;
-  letter-spacing:.05em;
-  margin-top:2px;
 }
 
 .passeio-body{
@@ -442,58 +429,6 @@ a{color:inherit;text-decoration:none;}
   .passeio-card.reverse .passeio-visual{order:1;}
   .passeio-card.reverse .passeio-body{order:2;}
   .passeio-visual{min-height:260px;}
-}
-
-/* ---------- PRECOS ---------- */
-#precos{
-  background:var(--noite);
-  color:var(--marfim);
-}
-#precos .section-eyebrow{color:var(--sol);}
-#precos .section-head h2{color:var(--marfim);}
-#precos .section-head p{color:var(--marfim-deep);opacity:.85;}
-
-.price-tables{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-}
-.price-table-card{
-  background:var(--noite-soft);
-  border-radius:24px;
-  padding:36px;
-  border:1px solid rgba(255,201,60,.14);
-}
-.price-table-card h4{
-  font-family:var(--display);
-  font-size:1.35rem;
-  font-weight:600;
-  color:var(--sol);
-  margin-bottom:24px;
-}
-table{width:100%;border-collapse:collapse;}
-th, td{
-  text-align:left;
-  padding:12px 8px;
-  font-size:.82rem;
-  border-bottom:1px solid rgba(247,241,228,.08);
-}
-th{
-  color:var(--marfim-deep);
-  font-weight:600;
-  text-transform:uppercase;
-  font-size:.68rem;
-  letter-spacing:.06em;
-  opacity:.7;
-}
-td{color:var(--marfim);}
-td.strong{font-weight:700;color:var(--sol);text-align:right;}
-tr:last-child td{border-bottom:none;}
-
-@media (max-width:820px){
-  .price-tables{grid-template-columns:1fr;}
-  .price-table-card{padding:24px 18px;overflow-x:auto;}
-  table{min-width:480px;}
 }
 
 /* ---------- CONDICOES ---------- */
@@ -804,7 +739,6 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
   <a href="#top" class="nav-logo">✦ Passeios <span>em Madri</span></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#roteiros">Roteiros</a></li>
-    <li><a href="#precos">Preços</a></li>
     <li><a href="#condicoes">Condições</a></li>
     <li><a href="#quemsomos">Quem somos</a></li>
     <li><a href="#opinioes">Opiniões</a></li>
@@ -823,7 +757,6 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
     <p>Onze roteiros a pé e de carro pela capital espanhola e seus arredores — de praças imperiais a aquedutos romanos, guiados por quem vive a cidade todos os dias.</p>
     <div class="hero-actions">
       <a href="#roteiros" class="btn-primary">Ver todos os roteiros →</a>
-      <a href="#precos" class="btn-ghost">Consultar preços</a>
     </div>
   </div>
   <div class="hero-stats">
@@ -848,37 +781,6 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
   </div>
 
   <div id="cardsWrap"></div>
-</section>
-
-<section class="section" id="precos">
-  <div class="section-head reveal">
-    <span class="section-eyebrow">Investimento</span>
-    <h2>Critérios orientativos</h2>
-    <p>Grupos e condições especiais mediante consulta.</p>
-  </div>
-
-  <div class="price-tables reveal">
-    <div class="price-table-card">
-      <h4>Serviços em Madrid Capital</h4>
-      <table>
-        <tbody>
-          <tr><td>Transfer</td><td class="strong">desde 160 €</td></tr>
-          <tr><td>Meio dia</td><td class="strong">desde 190 €</td></tr>
-          <tr><td>Assist. noturna</td><td class="strong">desde 200 €</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="price-table-card">
-      <h4>Serviços fora de Madrid</h4>
-      <table>
-        <tbody>
-          <tr><td>Meio dia</td><td class="strong">desde 240 €</td></tr>
-          <tr><td>Dia completo</td><td class="strong">desde 320 €</td></tr>
-          <tr><td>Segundo guia</td><td class="strong">desde 240 €</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 </section>
 
 <section class="section" id="condicoes">
@@ -993,7 +895,7 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
   <div class="contato-wrap">
     <div>
       <h2>Esperamos<br><em>passear</em><br>com você!</h2>
-      <p>Roteiros personalizáveis, uma guia que fala português e um jeito local de contar a história de Madri. Escreva pra gente e monte seu passeio ideal.</p>
+      <p>Roteiros personalizáveis, uma guia que fala português e um jeito local de contar a històia de Madri. Escreva pra gente e monte seu passeio ideal.</p>
       <div class="guides">
         <div class="guide-card">
           <div class="guide-avatar">G</div>
@@ -1012,7 +914,7 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
         <div><b>+34 687 630 129</b><span>WhatsApp e chamadas</span></div>
       </div>
       <div class="contact-row">
-        <div class="ico">📍</div>
+        <div class="ico">🍍</div>
         <div><b>Madri, Espanha</b><span>Passeios pela cidade e arredores</span></div>
       </div>
       <div class="contact-row">
@@ -1033,28 +935,28 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
 const passeios = [
   {
     n:1, tema:['pe'], dur:'2h', color1:'#FF6B4A', color2:'#F2A900',
-    titulo:'Madri essencial', preco:'170€', precoNota:'+ IVA · grupos a consultar',
+    titulo:'Madri essencial', icon:'🍛️',
     texto:'Madri é a cidade dos contrastes — tão tradicional quanto moderna. Vamos aos pontos turísticos imprescindíveis, descobrindo história, curiosidades e a gastronomia mais típica.',
     tags:['Visita a pé','Só exteriores'],
     paradas:['Plaza Mayor','Puerta del Sol','Teatro Real','Mercado de San Miguel','Palacio Real','Catedral de La Almudena','Plaza de la Villa']
   },
   {
     n:2, tema:['pe'], dur:'3h', color1:'#237567', color2:'#FFC93C',
-    titulo:'Madri e o Retiro', preco:'190€', precoNota:'+ IVA · grupos a consultar',
+    titulo:'Madri e o Retiro', icon:'🌳',
     texto:'Para completar o roteiro essencial, visitamos o interior do Parque El Retiro, o pulmão verde da cidade, e outros monumentos importantes ao redor.',
     tags:['Visita a pé','Só exteriores'],
     paradas:['Parque del Retiro (interior)','Puerta de Alcalá','Fuente Cibeles','Banco de España','Palacio de Cibeles']
   },
   {
     n:3, tema:['carro'], dur:'2h', color1:'#1B1035', color2:'#FF6B4A',
-    titulo:'Madrid panorâmico', preco:'190€', precoNota:'+ IVA · grupos a consultar',
+    titulo:'Madrid panorâmico', icon:'🚗?',
     texto:'Uma visão geral da cidade desde o conforto de um carro particular, passando pelos principais atrativos turísticos de Madri.',
     tags:['Visita de carro','Só exteriores'],
     paradas:['Santiago Bernabéu','Plaza de Toros','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Palacio de Cibeles','Plaza de Colón','Calle Serrano','Puerta de Toledo','Catedral de La Almudena']
   },
   {
     n:4, tema:['carro'], dur:'4h', color1:'#E8512F', color2:'#1B1035',
-    titulo:'Madrid panorâmico com Praça de Touros', preco:'215€', precoNota:'grupos a consultar',
+    titulo:'Madrid panorâmico com Praça de Touros', icon:'🐂',
     texto:'Se o panorâmico parece curto demais, conhecemos também o interior da Praça de Touros — visita livre e museu taurino incluídos.',
     tags:['Visita de carro','Só exteriores','Entrada não incluída'],
     paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Plaza de Colón','Calle Serrano'],
@@ -1062,7 +964,7 @@ const passeios = [
   },
   {
     n:5, tema:['carro'], dur:'4h', color1:'#185A4F', color2:'#F2A900',
-    titulo:'Madrid panorâmico com Santiago Bernabéu', preco:'215€', precoNota:'grupos a consultar',
+    titulo:'Madrid panorâmico com Santiago Bernabéu', icon:'⚽',
     texto:'A opção para quem quer conhecer o interior do lendário estádio do Real Madrid, o Santiago Bernabéu, além do roteiro panorâmico completo.',
     tags:['Visita de carro','Só exteriores','Entrada não incluída'],
     paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Fuente de Neptuno','Plaza de Colón','Catedral de La Almudena'],
@@ -1070,7 +972,7 @@ const passeios = [
   },
   {
     n:6, tema:['pe'], dur:'2h', color1:'#F2A900', color2:'#237567',
-    titulo:'Palacio Real', preco:'190€', precoNota:'máximo 9 pessoas',
+    titulo:'Palacio Real', icon:'👑',
     texto:'Conheça um dos maiores palácios da Europa por dentro: os cômodos favoritos dos reis, a sala de jantar de gala, a sala do Trono e o pátio de armas.',
     tags:['Visita a pé','Entrada não incluída'],
     paradas:['Visita guiada pelo interior do Palácio Real de Madri'],
@@ -1078,35 +980,35 @@ const passeios = [
   },
   {
     n:7, tema:['pe','fora'], dur:'5h', color1:'#FF6B4A', color2:'#237567',
-    titulo:'Alcalá de Henares', preco:'230€', precoNota:'grupos a consultar',
+    titulo:'Alcalá de Henares', icon:'📖',
     texto:'A cidade onde nasceu Miguel de Cervantes e por onde passaram Calderón de la Barca, Quevedo, Colombo e o Cardeal Cisneros — o Século de Ouro espanhol.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Calle Mayor','Plaza Cervantes','Casa Cervantes','Capilla del Oidor','Prefeitura','Catedral Magistral','Palacio Arzobispal','Rectorado de la Universidad']
   },
   {
     n:8, tema:['pe','fora'], dur:'5h', color1:'#F2A900', color2:'#1B1035',
-    titulo:'Segóvia', preco:'240€', precoNota:'grupos a consultar',
+    titulo:'Segóvia', icon:'🏰',
     texto:'Uma cidade mágica e essencialmente romana. Veremos o imponente aqueduto, a catedral, a judiaria e o Alcácer — inspiração do castelo da Cinderela.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Aqueduto de Segóvia','Mirante da Mulher Deitada','Casa dos Picos','Plaza Mayor','Catedral','Alcácer']
   },
   {
     n:9, tema:['pe','fora'], dur:'5h', color1:'#237567', color2:'#FF6B4A',
-    titulo:'Toledo', preco:'240€', precoNota:'grupos a consultar',
+    titulo:'Toledo', icon:'🕌',
     texto:'A cidade das três culturas — cristã, muçulmana e judia — e berço de grandes avanços científicos e literários da Espanha.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Plaza de Zocodover','Catedral','Prefeitura','Bairro Judeu','Mirante']
   },
   {
     n:10, tema:['pe','fora'], dur:'4h', color1:'#1B1035', color2:'#FFC93C',
-    titulo:'El Escorial', preco:'240€', precoNota:'grupos a consultar',
+    titulo:'El Escorial', icon:'⛪',
     texto:'Construído no século XVI, o interior deste mosteiro emblemático guarda cômodos reais, panteão, salas e bibliotecas históricas.',
     tags:['Transfer hotel-cidade','Visita a pé','Entrada não incluída'],
     paradas:['Mosteiro de El Escorial']
   },
   {
     n:11, tema:['pe','fora'], dur:'8h', color1:'#E8512F', color2:'#185A4F',
-    titulo:'Ávila', preco:'320€', precoNota:'grupos a consultar',
+    titulo:'Ávila', icon:'🛡️',
     texto:'Uma joia de Castela e Leão, Patrimônio da Humanidade, com a primeira catedral gótica da Espanha e o berço da ordem das Carmelitas Descalças.',
     tags:['Transfer hotel-cidade','Visita a pé','Só exteriores'],
     paradas:['Catedral','Muralha','Plaza Mayor','Prefeitura','Convento de Santa Teresa']
@@ -1124,7 +1026,7 @@ function render(list){
           <span class="num">${String(p.n).padStart(2,'0')}</span>
           <span class="lbl">Passeio</span>
         </div>
-        <div class="price-tag">${p.preco}<small>${p.precoNota}</small></div>
+        <div class="icon-badge">${p.icon}</div>
       </div>
       <div class="passeio-body">
         <div class="passeio-tags">
@@ -1176,7 +1078,7 @@ navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
 // Scroll spy
-const sections = ['roteiros','precos','condicoes','quemsomos','opinioes','contato'];
+const sections = ['roteiros','condicoes','quemsomos','opinioes','contato'];
 const navA = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let current = '';
