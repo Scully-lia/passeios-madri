@@ -239,6 +239,44 @@ a{color:inherit;text-decoration:none;}
   opacity:.8;
 }
 
+@media (max-width:600px){
+  .hero{
+    padding:100px 6vw 60px;
+    min-height:auto;
+  }
+  .hero-blob.b1{
+    width:280px;height:280px;
+    top:-80px;right:-100px;
+  }
+  .hero-blob.b2{
+    width:160px;height:160px;
+    bottom:20px;right:-40px;
+  }
+  .hero h1{
+    font-size:clamp(2.2rem, 11vw, 3.2rem);
+    line-height:1.05;
+  }
+  .hero p{
+    font-size:1rem;
+    max-width:100%;
+  }
+  .hero-actions{
+    margin-top:32px;
+  }
+  .btn-primary, .btn-ghost{
+    width:100%;
+    justify-content:center;
+    padding:14px 24px;
+  }
+  .hero-stats{
+    margin-top:48px;
+    gap:28px;
+  }
+  .hero-stat b{
+    font-size:1.8rem;
+  }
+}
+
 /* ---------- SECTION GENERIC ---------- */
 .section{
   padding:120px 5vw;
@@ -894,7 +932,7 @@ footer .foot-sub{opacity:.6;margin-top:8px;}
   <div class="contato-wrap">
     <div>
       <h2>Esperamos<br><em>passear</em><br>com você!</h2>
-      <p>Roteiros personalizáveis, uma guia que fala português e um jeito local de contar a história de Madri. Escreva pra gente e monte seu passeio ideal.</p>
+      <p>Roteiros personalizáveis, uma guia que fala português e um jeito local de contar a històia de Madri. Escreva pra gente e monte seu passeio ideal.</p>
       <div class="guides">
         <div class="guide-card">
           <div class="guide-avatar">G</div>
@@ -956,7 +994,7 @@ const passeios = [
   {
     n:4, tema:['carro'], dur:'4h', color1:'#E8512F', color2:'#1B1035',
     titulo:'Madrid panorâmico com Praça de Touros',
-    texto:'Se o panorâmico parece curto demais, conhecemos também o interior da Praça de Touros — visita livre e museu taurino incluídos.',
+    texto:'Se o panorâmico parece curto demais, conhecemos também o interior da Praça de Touros — visita livre e museu taurin incluídos.',
     tags:['Visita de carro','Só exteriores','Entrada não incluída'],
     paradas:['Santiago Bernabéu','Plaza de Toros (visita livre)','Puerta de Alcalá','Parque de El Retiro','Estación de Atocha','Paseo del Arte','Fuente de Neptuno','Plaza de Colón','Calle Serrano'],
     nota:'*Sujeito à disponibilidade e horário de funcionamento.'
